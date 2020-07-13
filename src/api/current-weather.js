@@ -14,8 +14,18 @@ router.get("/", async (req, res, next) => {
                 appid: process.env.OPEN_API_KEY,
             },
         });
-        // 2. respond to this request with data from nasa api
-        return res.json(data);
+        const result = {
+            succes: true,
+            data: {
+                date: data.weather[0].main,
+                icon:
+                    process.env.ICON_URL +
+                    data.weather[0].icon +
+                    process.env.EXT,
+                temp: data.main.temp,
+            },
+        };
+        return res.json(result);
     } catch (error) {
         return next(error);
     }
