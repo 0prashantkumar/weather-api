@@ -1,4 +1,4 @@
-# Mars Weather API Proxy
+# Weather API Proxy
 
 ## Setup
 
