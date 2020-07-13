@@ -6,7 +6,7 @@
 npm install
 ```
 
-* Copy the `.env.sample` file to `.env` and update with your Nasa API key
+* Copy the `.env.sample` file to `.env` and update with your API key
 
 ## Lint
 
